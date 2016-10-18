@@ -1,0 +1,38 @@
+permalink: "/:title"
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+exclude: 
+  - README.md
+  - LICENSE.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - .c9
+
+collections:
+  docs:
+    output: true
+    permalink: "/:title/"
+    lang: "default"
+
+defaults:
+  -
+    scope:
+      type: "docs"       
+      path: "_docs/es/"
+    values:
+      layout: default
+      lang: "es"
+  -
+    scope:
+      type: "docs"     
+      path: "_docs/en/"
+    values:
+      layout: default
+      lang: "en"
